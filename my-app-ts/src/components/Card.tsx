@@ -1,9 +1,16 @@
-export const Card = () => {
+interface ICard {
+  id: number;
+  paragraph: string;
+  details: string;
+}
+
+export const Card = ({ id, paragraph, details }: ICard) => {
+  console.log(id);
   return (
     <div>
-      <h1>Card Component</h1>
-      <p>Paragraph</p>
-      <p>Details about the card</p>
+      <h1>Card Component {id} </h1>
+      <p>{paragraph}</p>
+      <p>{details}</p>
     </div>
   );
 };
