@@ -5,10 +5,8 @@ function App() {
   return (
     <div className="App">
       Hello world!
-      <div>
-        <h1>Card</h1>
-        <p>Parágrafo</p>
-      </div>
+      <Card />
+      <Card />
       <Card />
     </div>
   );

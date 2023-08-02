@@ -1,3 +1,3 @@
 export const Card = () => {
-  return <div>Componente Card</div>;
+  return <div>Card Component</div>;
 };
