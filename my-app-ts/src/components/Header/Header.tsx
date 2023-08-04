@@ -1,3 +1,5 @@
+import "./Header.css";
+
 export const Header = () => {
-  return <div>Dio Bank</div>;
+  return <div className="header">Dio Bank</div>;
 };

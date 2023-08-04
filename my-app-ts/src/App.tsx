@@ -1,10 +1,16 @@
-import React from "react";
+import styled from "styled-components";
 import { Layout } from "./components/Layout";
+
+const Box = styled.div`
+  background-color: orange;
+`;
 
 function App() {
   return (
     <Layout>
-      <h1>Login</h1>
+      <Box>
+        <h1>Login</h1>
+      </Box>
       <label htmlFor="emailInput">Email:</label>
       <input type="email" id="emailInput" />
       <label htmlFor="passwordInput">Password:</label>
