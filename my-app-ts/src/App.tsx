@@ -1,4 +1,5 @@
 import { Box, Button, Center, ChakraProvider, Input } from "@chakra-ui/react";
+import { login } from "./services/login";
 
 function App() {
   return (
@@ -11,7 +12,13 @@ function App() {
           <Input placeholder="Email" />
           <Input placeholder="Password" />
           <Center>
-            <Button colorScheme="teal" size="sm" width="100%" marginTop="5px">
+            <Button
+              onClick={login}
+              colorScheme="teal"
+              size="sm"
+              width="100%"
+              marginTop="5px"
+            >
               LOGIN
             </Button>
           </Center>
