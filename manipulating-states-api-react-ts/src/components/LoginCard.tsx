@@ -4,17 +4,24 @@ import { login } from "../services/login";
 import { useState, useEffect } from "react";
 import { api } from "../api";
 
+interface UserData {
+  email: string;
+  password: string;
+  name: string;
+}
+
 export const LoginCard = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [userData, setUserData] = useState<null | UserData>();
 
   useEffect(() => {
     const getData = async () => {
-      const data = await api;
-      console.log(data);
+      const data: any | UserData = await api;
+      setUserData(data);
     };
 
     getData();
-  });
+  }, []);
 
   return (
     <Box minHeight="100vh" backgroundColor="#7f28b5" padding="25px">
@@ -22,6 +29,7 @@ export const LoginCard = () => {
         <Center>
           <h1>Login</h1>
         </Center>
+        <p>{userData?.name}</p>
         <Input
           placeholder="Email"
           value={email}
