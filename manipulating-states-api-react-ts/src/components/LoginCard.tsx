@@ -19,7 +19,7 @@ export const LoginCard = () => {
         />
         <Input placeholder="Password" />
         <Center>
-          <LoginButton onClick={login} />
+          <LoginButton onClick={() => login(email)} />
         </Center>
       </Box>
     </Box>

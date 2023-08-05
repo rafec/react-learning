@@ -1,3 +1,3 @@
-export const login = (): void => {
-  alert("Welcome, Rafael!");
+export const login = (email: string): void => {
+  alert(`Welcome, ${email}!`);
 };
