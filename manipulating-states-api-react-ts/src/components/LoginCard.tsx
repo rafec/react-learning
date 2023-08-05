@@ -29,7 +29,6 @@ export const LoginCard = () => {
         <Center>
           <h1>Login</h1>
         </Center>
-        <p>{userData?.name}</p>
         <Input
           placeholder="Email"
           value={email}
