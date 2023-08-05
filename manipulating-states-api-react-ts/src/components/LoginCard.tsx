@@ -26,6 +26,11 @@ export const LoginCard = () => {
   return (
     <Box minHeight="100vh" backgroundColor="#7f28b5" padding="25px">
       <Box backgroundColor="#FFFFFF" borderRadius="25px" padding="15px">
+        {userData === null || userData === undefined ? (
+          <h1>Loading...</h1>
+        ) : (
+          <h1>Data loaded!</h1>
+        )}
         <Center>
           <h1>Login</h1>
         </Center>
