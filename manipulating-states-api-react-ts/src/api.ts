@@ -2,6 +2,7 @@ const account = {
   email: "rafael@mail.com",
   password: 123456,
   name: "Rafael Brizuena",
+  balance: 2000,
 };
 
 export const api = new Promise((resolve) => {

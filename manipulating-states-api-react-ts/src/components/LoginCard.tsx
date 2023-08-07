@@ -1,27 +1,10 @@
 import { Box, Center, Input } from "@chakra-ui/react";
 import { LoginButton } from "./LoginButton";
 import { login } from "../services/login";
-import { useState, useEffect } from "react";
-import { api } from "../api";
-
-interface UserData {
-  email: string;
-  password: string;
-  name: string;
-}
+import { useState } from "react";
 
 export const LoginCard = () => {
   const [email, setEmail] = useState<string>("");
-  const [userData, setUserData] = useState<null | UserData>();
-
-  useEffect(() => {
-    const getData = async () => {
-      const data: any | UserData = await api;
-      setUserData(data);
-    };
-
-    getData();
-  }, []);
 
   return (
     <Box
@@ -30,11 +13,6 @@ export const LoginCard = () => {
       padding="15px"
       margin="25px"
     >
-      {/* {userData === null || userData === undefined ? (
-          <h1>Loading...</h1>
-        ) : (
-          <h1>Data loaded!</h1>
-        )} */}
       <Center>
         <h1>Login</h1>
       </Center>
