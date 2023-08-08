@@ -22,7 +22,7 @@ const Account = () => {
     getData();
   }, []);
 
-  console.log(userData);
+  const actualData = new Date();
 
   return (
     <Center>
@@ -32,10 +32,17 @@ const Account = () => {
             <Spinner size="xl" color="#FFFFFF" />
           </Center>
         ) : (
-          <CardInfo
-            mainContent={`Welcome, ${userData?.name}!`}
-            content={"22/05/2020 9:00"}
-          />
+          <>
+            <CardInfo
+              mainContent={`Welcome, ${userData?.name}!`}
+              content={`${actualData.getDay()}/${actualData.getMonth()}/${actualData.getFullYear()} ${actualData.getHours()}:${actualData.getMinutes()}`}
+            />
+
+            <CardInfo
+              mainContent={`Balance`}
+              content={`R$ ${userData.balance.toFixed(2)}`}
+            />
+          </>
         )}
 
         {/* <CardInfo mainContent={"Account information"} content={} /> */}
