@@ -1,22 +1,32 @@
 import { login } from "./login";
 
+const mockSetIsLoggedIn = jest.fn();
+const mockNavigate = jest.fn();
+
+jest.mock("react", () => ({
+  ...jest.requireActual("react"),
+  useContext: () => ({
+    setIsLoggedIn: mockSetIsLoggedIn,
+  }),
+}));
+
+jest.mock("react-router-dom", () => ({
+  ...(jest.requireActual("react-router-dom") as any),
+  useNavigate: () => mockNavigate,
+}));
+
 describe("login", () => {
-  const mockAlert = jest.fn();
   const mockEmail = "rafael@mail.com";
-  window.alert = mockAlert;
 
   it("Should display an 'Welcome!' alert if the email is valid.", async () => {
     await login(mockEmail);
-    expect(mockAlert).toHaveBeenCalledWith(`Welcome, ${mockEmail}!`);
-  });
-
-  it("Should not display 'Welcome!' alert without an email.", async () => {
-    await login(mockEmail);
-    expect(mockAlert).not.toHaveBeenCalledWith("Welcome, !");
+    expect(mockSetIsLoggedIn).toHaveBeenCalledWith(true);
+    expect(mockNavigate).toHaveBeenCalledWith("/1");
   });
 
   it("Should display an error if the email is invalid.", async () => {
     await login("invalid@mail.com");
-    expect(mockAlert).toHaveBeenCalledWith("Invalid email!");
+    expect(mockSetIsLoggedIn).not.toHaveBeenCalled();
+    expect(mockNavigate).not.toHaveBeenCalled();
   });
 });
