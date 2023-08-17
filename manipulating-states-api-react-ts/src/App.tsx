@@ -4,19 +4,7 @@ import Account from "./pages/Account";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Layout } from "./components/Layout";
 import AccountInfo from "./pages/AccountInfo";
-import { createContext } from "react";
-
-interface IAppContext {
-  user: string;
-}
-
-export const AppContext = createContext({} as IAppContext);
-
-const AppContextProvider = ({ children }: any) => {
-  const user = "Rafael";
-
-  return <AppContext.Provider value={{ user }}>{children}</AppContext.Provider>;
-};
+import { AppContextProvider } from "./components/AppContext";
 
 function App() {
   return (
