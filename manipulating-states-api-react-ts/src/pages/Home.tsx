@@ -15,7 +15,7 @@ const Home = () => {
     const loggedIn = await login(email);
 
     if (!loggedIn) {
-      alert("Invalid email!");
+      return alert("Invalid email!");
     }
 
     setIsLoggedIn(true);
