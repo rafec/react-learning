@@ -10,7 +10,7 @@ const MainRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={isLoggedIn ? <Account /> : <Home />} />
       <Route
         path="/account/:id"
         element={isLoggedIn ? <Account /> : <Home />}
