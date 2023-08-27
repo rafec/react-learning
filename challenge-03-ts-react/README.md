@@ -41,3 +41,8 @@ desenvolvido por [Nathally Souza](https://github.com/nathyts)
 - Escreva os testes unitários para as funções criadas ou refatoradas.
 
 [X] Fazer o deploy no Netlify e compartilhar o link da página
+
+### Acessando o site
+
+1 - Acesse: https://diobank-rafec.vercel.app/
+2 - Entre com as credenciais: rafael@mail.com / 123456
