@@ -45,4 +45,5 @@ desenvolvido por [Nathally Souza](https://github.com/nathyts)
 ### Acessando o site
 
 1 - Acesse: https://diobank-rafec.vercel.app/
+
 2 - Entre com as credenciais: rafael@mail.com / 123456
