@@ -51,14 +51,14 @@ const Account = () => {
               content={`${actualData.getDay()}/${actualData.getMonth()}/${actualData.getFullYear()} ${actualData.getHours()}:${actualData.getMinutes()}`}
             />
 
+            <CardInfo mainContent={userData.name} content={userData.email} />
+
             <CardInfo
               mainContent={`Balance`}
               content={`R$ ${userData.balance.toFixed(2)}`}
             />
           </>
         )}
-
-        {/* <CardInfo mainContent={"Account information"} content={} /> */}
       </SimpleGrid>
     </Center>
   );
