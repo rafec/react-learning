@@ -2,7 +2,7 @@ import React from "react";
 import {
 	GridComponent,
 	ColumnsDirective,
-	ColumDirective,
+	ColumnDirective,
 	Resize,
 	Sort,
 	ContextMenu,
@@ -16,7 +16,6 @@ import {
 
 import { ordersData, contextMenuItems, ordersGrid } from "../data/dummy";
 import { Header } from "../components";
-import { ColumnDirective } from "@syncfusion/ej2-react-kanban";
 
 const Orders = () => {
 	return (
