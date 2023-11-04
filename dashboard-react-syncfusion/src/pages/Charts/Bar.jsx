@@ -31,6 +31,7 @@ const Bar = () => {
 				primaryYAxis={barPrimaryYAxis}
 				chartArea={{ border: { width: 0 } }}
 				tooltip={{ enable: true }}
+				legendSettings={{ background: "white" }}
 				// background={currentMode === "Dark" ? "#33373E" : "#fff"}
 			>
 				<Inject
