@@ -15,10 +15,10 @@ import {
 	LinePrimaryXAxis,
 	LinePrimaryYAxis,
 } from "../../data/dummy";
-import { useStateContext } from "../../contexts/ContextProvider";
+// import { useStateContext } from "../../contexts/ContextProvider";
 
 const LineChart = () => {
-	const { currentMode } = useStateContext();
+	// const { currentMode } = useStateContext();
 	return (
 		<ChartComponent
 			id="line-chart"
@@ -27,7 +27,7 @@ const LineChart = () => {
 			primaryYAxis={LinePrimaryYAxis}
 			chartArea={{ border: { width: 0 } }}
 			tooltip={{ enable: true }}
-			background={currentMode === "Dark" ? "#33373E" : "#fff"}
+			// background={currentMode === "Dark" ? "#33373E" : "#fff"}
 		>
 			<Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
 			<SeriesCollectionDirective>
