@@ -39,6 +39,8 @@ const ThemeSettings = () => {
 						<label htmlFor="light" className="ml-2 text-md cursor-pointer">
 							Light
 						</label>
+					</div>
+					<div className="mt-4">
 						<input
 							type="radio"
 							id="dark"
