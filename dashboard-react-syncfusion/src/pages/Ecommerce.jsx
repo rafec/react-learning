@@ -6,11 +6,16 @@ import { earningData, SparklineAreaData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
-	const { currentColor, setStackedChartBackground } = useStateContext();
+	const { currentColor, currentMode, setStackedChartBackground } =
+		useStateContext();
 
 	useEffect(() => {
-		setStackedChartBackground("#33373E");
-	}, [setStackedChartBackground]);
+		if (currentMode === "Dark") {
+			setStackedChartBackground("#33373E");
+		} else {
+			setStackedChartBackground("#fff");
+		}
+	}, [currentMode, setStackedChartBackground]);
 
 	return (
 		<div className="mt-24">
