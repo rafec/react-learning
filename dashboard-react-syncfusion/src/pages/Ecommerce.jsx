@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { GoDotFill } from "react-icons/go";
 
 import { Stacked, Button, SparkLine } from "../components";
@@ -6,16 +6,7 @@ import { earningData, SparklineAreaData } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
-	const { currentColor, currentMode, setStackedChartBackground } =
-		useStateContext();
-
-	useEffect(() => {
-		if (currentMode === "Dark") {
-			setStackedChartBackground("#33373E");
-		} else {
-			setStackedChartBackground("#fff");
-		}
-	}, [currentMode, setStackedChartBackground]);
+	const { currentColor, currentMode } = useStateContext();
 
 	return (
 		<div className="mt-24">
@@ -121,7 +112,11 @@ const Ecommerce = () => {
 							</div>
 						</div>
 						<div>
-							<Stacked width="320px" height="360px" />
+							<Stacked
+								width="320px"
+								height="360px"
+								bgColor={currentMode === "Dark" ? "#33373E" : "#fff"}
+							/>
 						</div>
 					</div>
 				</div>

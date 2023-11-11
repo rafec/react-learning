@@ -20,7 +20,6 @@ export const ContextProvider = ({ children }) => {
 		localStorage.getItem("themeMode")
 	);
 	const [themeSettings, setThemeSettings] = useState(false);
-	const [stackedChartBackground, setStackedChartBackground] = useState("#fff");
 
 	const setMode = (e) => {
 		setCurrentMode(e.target.value);
@@ -68,8 +67,6 @@ export const ContextProvider = ({ children }) => {
 				setThemeSettings,
 				setMode,
 				setColor,
-				stackedChartBackground,
-				setStackedChartBackground,
 			}}
 		>
 			{children}
