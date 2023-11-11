@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
 	ChartComponent,
 	SeriesCollectionDirective,
@@ -19,7 +19,12 @@ import {
 import { useStateContext } from "../../contexts/ContextProvider";
 
 const Stacked = ({ width, height }) => {
-	const { currentMode } = useStateContext();
+	const { currentMode, stackedChartBackground, setStackedChartBackground } =
+		useStateContext();
+
+	useEffect(() => {
+		setStackedChartBackground("#fff");
+	}, [setStackedChartBackground]);
 
 	return (
 		<ChartComponent
@@ -31,7 +36,7 @@ const Stacked = ({ width, height }) => {
 			chartArea={{ border: { width: 0 } }}
 			tooltip={{ enable: true }}
 			legendSettings={{ background: "white" }}
-			background={currentMode === "Dark" ? "#33373E" : "#fff"}
+			background={stackedChartBackground}
 			palettes={currentMode === "Dark" ? ["#00bdae", "grey"] : ""}
 		>
 			<Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
