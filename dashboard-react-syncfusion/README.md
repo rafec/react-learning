@@ -1,7 +1,7 @@
-https://syncfusion-dashboard-rafael.vercel.app/
+# Interactive Dashboard
+> Website: https://syncfusion-dashboard-rafael.vercel.app/
 
-## Interactive Dashboard
-Made with React.js, Syncfusion and Tailwindcss, this dashboard was developed by Adrian Hajdin (https://github.com/adrianhajdin) and is available as a tutorial on YoutTube at [https://www.youtube.com/watch?v=jx5hdo50a2M&t=13227s&ab_channel=JavaScriptMastery](https://youtu.be/jx5hdo50a2M?si=4Cyz4HFUztetmVKu)
+Made with React.js, Syncfusion and Tailwindcss, this dashboard was developed by Adrian Hajdin (https://github.com/adrianhajdin) and is available as a tutorial on YoutTube at [https://www.youtube.com/watch?v=jx5hdo50a2M&t=13227s&ab_channel=JavaScriptMastery](https://youtu.be/jx5hdo50a2M?si=4Cyz4HFUztetmVKu).
 ![image](https://github.com/rafec/react-learning/assets/67665270/7f4644eb-e21e-4afb-a173-c8ee08b08b75)
 With interactive charts, there is possibility for various setups, with many informations to display.
 
