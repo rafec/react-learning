@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { useState, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 
@@ -8,6 +8,7 @@ import Bird from '../models/Bird'
 import Plane from '../models/Plane'
 
 const Home = () => {
+  const [isRotating, setIsRotating] = useState(false);
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];
@@ -28,7 +29,7 @@ const Home = () => {
     <section className='w-full h-screen relative'>
       {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>POPUP</div> */}
       <Canvas
-      className='w-full h-screen bg-transparent'
+      className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
       camera={{ near: 0.1, far: 1000 }}>
         <Suspense fallback={<Loader />}>
           <directionalLight position={[1, 1, 1]} intensity={2} />
@@ -41,6 +42,8 @@ const Home = () => {
           position={islandPosition}
           scale={islandScale}
           rotation={islandRotation}
+          isRotating={isRotating}
+          setIsRotating={setIsRotating}
           />
           <Plane />
         </Suspense>
