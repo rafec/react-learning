@@ -116,12 +116,16 @@ const Contact = () => {
 				<Canvas
 					camera={{
 						position: [0, 0, 5],
+						fov: 75,
+						near: 0.1,
+						far: 1000,
 					}}
 				>
+					<directionalLight intensity={2.5} position={[0, 0, 1]} />
 					<Suspense fallback={<Loader />}>
 						<Fox
 							position={[0.5, 0.35, 0]}
-							rotation={[12, 0, 0]}
+							rotation={[12.6, -0.6, 0]}
 							scale={[0.5, 0.5, 0.5]}
 						/>
 					</Suspense>
