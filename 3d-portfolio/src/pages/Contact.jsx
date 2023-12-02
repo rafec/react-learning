@@ -122,6 +122,7 @@ const Contact = () => {
 					}}
 				>
 					<directionalLight intensity={2.5} position={[0, 0, 1]} />
+					<ambientLight intensity={0.5} />
 					<Suspense fallback={<Loader />}>
 						<Fox
 							position={[0.5, 0.35, 0]}
